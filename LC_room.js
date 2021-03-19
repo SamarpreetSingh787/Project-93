@@ -18,7 +18,7 @@ user_n = localStorage.getItem("user_name");
     Room_n = document.getElementById("room_name").value;
     firebase.database().ref("/").child(Room_n).update({purpose : "adding room name"});
     localStorage.setItem("room_name" , Room_n);
-    window.location = "LC_pg.html";
+    window.location.replace("LC_pg.html");
   }
 
 function getData() {
@@ -37,5 +37,5 @@ getData();
 function redirect(name) {
   console.log(name);
   localStorage.setItem("room_name" , name);
-  window.location = "LC_pg.html";
+  window.location.replace("LC_pg.html");
 }

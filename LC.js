@@ -3,5 +3,5 @@ function add_user(){
 
     localStorage.setItem("user_name" , user);
 
-    window.location = "lC.html";
+    window.location.replace("lC.html");
 }
